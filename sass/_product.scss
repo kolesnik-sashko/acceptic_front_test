@@ -297,6 +297,9 @@
           height: 20px;
           line-height: 20px;
           @include border-radius(4px);
+          &:not(.count){
+            cursor: pointer;
+          }
         }
 
       }

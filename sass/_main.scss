@@ -72,6 +72,9 @@ a.button {
   text-decoration: none;
   &.cart {
     border-color: $yellow;
+    &:hover{
+      background-color: $yellow;
+    }
   }
   &:hover {
     color: $light-black;
