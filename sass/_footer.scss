@@ -1,0 +1,15 @@
+footer{
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @extend %border-full;
+  &:before{
+    bottom: inherit;
+    top: 0;
+  }
+  .copyright{
+    text-align: center;
+    font-size: 13px;
+    color: $light-grey;
+  }
+}

@@ -1,0 +1,197 @@
+.header {
+  margin-bottom: 50px;
+  .container {
+    @media (min-width: 1301px) {
+      padding: 0;
+    }
+  }
+  nav {
+    a {
+      color: $light-black;
+    }
+    > ul {
+      > li {
+        > a {
+          text-transform: uppercase;
+        }
+        i {
+          margin-left: 10px;
+          position: relative;
+          top: -2px;
+        }
+      }
+    }
+  }
+  &-top {
+    @extend %border-full;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    @media(max-width: 768px) {
+      @include justify-content(flex-end);
+    }
+    padding: 28px 0;
+    .logo {
+      @media(max-width: 768px) {
+        order: 1;
+        margin-right: auto;
+      }
+    }
+    .country {
+      @media(max-width: 768px) {
+        order: 2;
+        margin-right: 8%;
+      }
+      @media(max-width: 480px) {
+        margin-right: 2%;
+      }
+      .current {
+        float: left;
+      }
+      img {
+        margin-right: 8px;
+      }
+      i {
+        margin-left: 10px;
+        position: relative;
+        top: -2px;
+      }
+    }
+    .cart {
+      @media(max-width: 768px) {
+        order: 3;
+        a {
+          border: none;
+          padding: 5px 10px;
+        }
+      }
+      @media (max-width: 480px) {
+        a {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+  &-bottom {
+    @extend %border-full;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (max-width: 768px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include flexbox;
+    @include justify-content(space-between);
+    .secondary {
+      max-width: 75px;
+      width: 100%;
+      .bar {
+        cursor: pointer;
+        @media (min-width: 781px) {
+          display: none;
+        }
+        + nav{
+          display: none;
+        }
+      }
+      i {
+        font-size: 16px;
+      }
+      &.right {
+        @media (max-width: 780px) {
+          position: absolute;
+          right: 0;
+          text-align: right;
+        }
+        a {
+          &:nth-child(1) {
+            padding-right: 15px;
+            position: relative;
+            &:after {
+              content: '';
+              position: absolute;
+              right: -1px;
+              top: -8px;
+              height: calc(100% + 16px);
+              width: 1px;
+              border-right: 1px dotted;
+            }
+          }
+          &:nth-child(2) {
+            padding-left: 15px;
+          }
+        }
+      }
+      &.left {
+        @media (max-width: 780px) {
+          max-width: inherit;
+        }
+      }
+    }
+    nav {
+      a {
+        &:hover {
+          color: $bright-blue;
+        }
+      }
+      @media (min-width: 781px) {
+        width: calc(100% - 150px);
+      }
+      @media (max-width: 780px) {
+        padding-top: 15px;
+        position: relative;
+        left: 50%;
+        margin-left: -50vw;
+        width: 100vw;
+
+      }
+      > ul {
+        &.level1 {
+          @media (min-width: 781px) {
+            @include flexbox;
+            @include justify-content(space-between);
+            max-width: 550px;
+            margin: auto;
+          }
+          width: 100%;
+          > li {
+            @media (max-width: 780px) {
+              background-color: $grey;
+              padding: 5px 20px;
+              position: relative;
+              &:not(:last-child) {
+                border-bottom: 1px solid $white;
+              }
+              a {
+                display: block;
+              }
+              i {
+                position: absolute;
+                right: 20px;
+              }
+            }
+          }
+          @media (max-width: 780px) {
+            .level2 {
+              position: static;
+              background-color: $grey;
+            }
+          }
+          @media (min-width: 781px) {
+            .level2 {
+              > li {
+                background: $white;
+                a {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
