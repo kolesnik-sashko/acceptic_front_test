@@ -82,11 +82,17 @@ a.button {
 }
 
 input[type="button"] {
+  background: $white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   cursor: pointer;
 }
 
 input,
 select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @include border-radius(0);
   &:focus{
     outline-offset: 0;
     box-shadow: none;
