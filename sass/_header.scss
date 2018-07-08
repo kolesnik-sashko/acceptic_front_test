@@ -21,7 +21,7 @@
           height: 20px;
           width: 20px;
           text-align: center;
-          @media (max-width: 780px){
+          @media (max-width: 780px) {
             height: 28px;
             width: 28px;
             top: 0px;
@@ -99,7 +99,7 @@
         @media (min-width: 781px) {
           display: none;
         }
-        + nav{
+        + nav {
           display: none;
         }
       }

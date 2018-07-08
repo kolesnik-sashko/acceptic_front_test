@@ -72,7 +72,7 @@ a.button {
   text-decoration: none;
   &.cart {
     border-color: $yellow;
-    &:hover{
+    &:hover {
       background-color: $yellow;
     }
   }
@@ -89,11 +89,11 @@ input[type="button"] {
 }
 
 input,
-select{
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
   @include border-radius(0);
-  &:focus{
+  &:focus {
     outline-offset: 0;
     box-shadow: none;
     outline: 1px solid;
@@ -163,7 +163,7 @@ i {
 
 .dropdown {
   position: relative;
-  .fa-sort-down{
+  .fa-sort-down {
     cursor: pointer;
   }
   &-content {

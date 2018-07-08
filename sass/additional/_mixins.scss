@@ -29,7 +29,7 @@
   transform: $transforms;
 }
 
-@mixin rotate ($deg) {
+@mixin rotate($deg) {
   @include transform(rotate(#{$deg}deg));
 }
 
@@ -39,7 +39,7 @@
   -moz-transition: $property $duration $easing;
 }
 
-@mixin opacity($value){
+@mixin opacity($value) {
   $IEValue: $value*100;
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
@@ -121,7 +121,6 @@
   -moz-align-items: $value;
   align-items: $value;
 }
-
 
 %border-full {
   position: relative;
